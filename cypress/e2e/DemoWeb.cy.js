@@ -23,7 +23,7 @@ describe('Demo Cypress', () => {
 
 })
 
-it('Campos Obrigatórios Email', () => {
+it('Campo Obrigatório Email', () => {
   cy.visit('https://form.jotform.com/231692676005660')
   cy.get('input[id="first_20"]').type('rafael')
   cy.get('input[id="last_20"]').type('Suzano')
@@ -56,7 +56,7 @@ it('Campos Obrigatórios Email', () => {
 })
 
 
-it('Campos Obrigatórios nome', () => {
+it('Campo Obrigatório nome', () => {
   cy.visit('https://form.jotform.com/231692676005660')
  // cy.get('input[id="first_20"]').type('rafael')
   cy.get('input[id="last_20"]').type('Suzano')
@@ -85,10 +85,24 @@ it('Campos Obrigatórios nome', () => {
 
 })
 
+context ('Nuclea',()=>{
+it('Acessar o site', () => {
+  cy.visit('https://www.nuclea.com.br/')
 
 
+  cy.title('Home - Nuclea')
+
+})
+
+it('Acessar o suporte', () => {
+  cy.visit('https://www.nuclea.com.br/')
+
+
+  cy.title('Home - Nuclea')
 
 })
 
 
 
+})
+})
