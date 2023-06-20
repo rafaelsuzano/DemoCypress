@@ -1,5 +1,11 @@
 describe('Demo Cypress', () => {
-  it('Fluxo Principal', () => {
+    beforeEach(() => {
+
+       // cy.viewport(1280, 1080)
+      })
+
+
+  it.skip('Fluxo Principal', () => {
     cy.visit('https://form.jotform.com/231692676005660')
     cy.get('input[id="first_20"]').type('rafael')
     cy.get('input[id="last_20"]').type('Suzano')
@@ -19,11 +25,11 @@ describe('Demo Cypress', () => {
     should('be.visible')
 
     cy.contains('Thank You!')
-    
+
 
 })
 
-it('Campo Obrigatório Email', () => {
+it.skip('Campo Obrigatório Email', () => {
   cy.visit('https://form.jotform.com/231692676005660')
   cy.get('input[id="first_20"]').type('rafael')
   cy.get('input[id="last_20"]').type('Suzano')
@@ -39,24 +45,24 @@ it('Campo Obrigatório Email', () => {
 
   cy.get('#input_2').click();
 
-  
+
   cy.get('*[class^="form-line jf-required form-line-error"]').
   should('be.visible')
 
   cy.contains('This field is require')
 
 
-  
+
   cy.get('*[class^="error-navigation-message"]').
   should('be.visible')
 
   cy.contains('This field is require')
-  
+
 
 })
 
 
-it('Campo Obrigatório nome', () => {
+it.skip('Campo Obrigatório nome', () => {
   cy.visit('https://form.jotform.com/231692676005660')
  // cy.get('input[id="first_20"]').type('rafael')
   cy.get('input[id="last_20"]').type('Suzano')
@@ -72,20 +78,21 @@ it('Campo Obrigatório nome', () => {
 
   cy.get('#input_2').click();
 
-  
+
   cy.get('*[class^="form-line jf-required form-line-error"]').
   should('be.visible')
 
   cy.contains('This field is require')
 
 
-  
+
+
 
 
 })
 
 context ('Nuclea',()=>{
-it('Acessar o site', () => {
+it.skip('Acessar o site', () => {
   cy.visit('https://www.nuclea.com.br/')
 
 
@@ -98,10 +105,46 @@ it('Acessar o suporte', () => {
 
 
   cy.title('Home - Nuclea')
+   cy.get('footer').scrollIntoView()
+    cy.get("div.elementor-element-b6b0e62 p:nth-of-type(5) > a").click();
+   cy.get('footer').scrollIntoView()
+
+
+       cy.get("#rd-text_field-_mI744vBjEJufuDoO_z0kg").click();
+       cy.get("#rd-text_field-_mI744vBjEJufuDoO_z0kg").type("Rafael Suzano Cruz");
+       cy.get("#rd-email_field-gyJKtpzoChtgs0juA7SmTA").click();
+       cy.get("#rd-email_field-gyJKtpzoChtgs0juA7SmTA").type("Rafaelsuzano@hotmail.com");
+       cy.get("#rd-email_field-gyJKtpzoChtgs0juA7SmTA").click();
+
+       cy.get("#rd-text_field-ZQf1lWGKV7RWDsEb4OHY_A").click();
+       cy.get("#rd-text_field-ZQf1lWGKV7RWDsEb4OHY_A").type("suzanoit");
+       cy.get("#rd-number_field-xnMsSVrUNJ-iYu0YHBYShA").click();
+       cy.get("#rd-text_field-DKjPQoIPb8I_zMoCR-Q7Yw").click();
+       cy.get("#rd-text_field-DKjPQoIPb8I_zMoCR-Q7Yw").type("Engenheiro QA");
+       cy.get("#rd-phone_field-HKJmqtMCwNsHOhOzYpIYbQ").click();
+       cy.get("#rd-phone_field-HKJmqtMCwNsHOhOzYpIYbQ").type("+55 (11) 94788-1630");
+
+
+       cy.get("#rd-text_area_field-2vG7TKeKLaDSuYCB8fj3Aw").click();
+       cy.get("#rd-text_area_field-2vG7TKeKLaDSuYCB8fj3Aw").type("teste");
+        cy.get('#rd-select_field-fuSkhmpIjyvw2eiiaZdDag').select('SP')
+
+
+
+            cy.get('#s2id_rd-text_field-l8EvGHMB9KkYmcp8AryK-w').should('be.visible').type('Agudos')
+     cy.get('select2-drop select2-display-none select2-with-searchbox select2-drop-active').click()
+        cy.get("#rd-select_field-LW9Jq1_pPPSd_8IIrgtjXQ").select("C3 Registradora")
+
+
+
+
+
+  });
+
 
 })
 
 
 
 })
-})
+
