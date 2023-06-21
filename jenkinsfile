@@ -32,6 +32,6 @@ pipeline {
               reportName: "Report"])
     }
   }    
-
+}
 }
 }
