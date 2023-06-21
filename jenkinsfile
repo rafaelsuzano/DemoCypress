@@ -20,18 +20,7 @@ pipeline {
                echo 'Deploying....'
            }
        }
-      post {
-    always {
-        publishHTML (target: [
-
-              allowMissing: false,
-              alwaysLinkToLastBuild: false,
-              keepAll: true,
-              reportDir: '/var/lib/jenkins/workspace/DemoCypress/cypress/reports/html/',
-              reportFiles: "index.html",
-              reportName: "Report"])
-    }
-  }    
+   
 }
 }
 }
