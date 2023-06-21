@@ -1,0 +1,24 @@
+pipeline {
+   agent any
+
+   tools {nodejs "Node12"}
+
+   stages {
+       stage('Dependencies') {
+           steps {
+      
+               sh 'npm install '
+           }
+       }
+       stage('e2e Tests') {
+           steps {
+               sh 'npx cypress run'
+           }
+       }
+       stage('Deploy') {
+           steps {
+               echo 'Deploying....'
+           }
+       }
+   }
+}
