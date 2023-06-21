@@ -80,7 +80,7 @@ it('Campo Obrigatório nome', () => {
 })
 
 context ('Nuclea',()=>{
-it.skip('Acessar o site', () => {
+it('Acessar o site', () => {
   cy.visit('https://www.nuclea.com.br/')
 
 
