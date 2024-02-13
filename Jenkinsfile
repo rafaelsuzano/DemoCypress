@@ -15,7 +15,12 @@ pipeline {
        stage('Install Cypress') {
            steps {
        
-               sh 'npm install cypress --save-dev'
+               sh 'npx cypress install --force'
+           }
+
+           steps {
+       
+               sh 'npx cypress verify'
            }
        }
        
@@ -30,5 +35,5 @@ pipeline {
            }
        }
    
-}
+
 }
