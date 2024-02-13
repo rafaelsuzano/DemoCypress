@@ -1,7 +1,8 @@
 pipeline {
-  agent any
-
-
+    agent any
+    options {
+        ansiColor('xterm')
+    }
 
    stages {
        stage('Dependencies') {
