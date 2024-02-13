@@ -7,7 +7,7 @@ pipeline {
        stage('Dependencies') {
            steps {
        
-               sh 'npm install cypress'
+               sh 'npm install cypress --force'
            }
        }
        stage('e2e Tests') {
