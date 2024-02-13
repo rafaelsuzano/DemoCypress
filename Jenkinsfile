@@ -18,10 +18,7 @@ pipeline {
                sh 'npx cypress install --force'
            }
 
-           steps {
        
-               sh 'npx cypress verify'
-           }
        }
        
        stage('e2e Tests') {
