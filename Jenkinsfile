@@ -37,7 +37,7 @@ pipeline {
 
     post {
     success {
-      slackSend color: '#36a64f', message: "Automação executada com sucesso !!",slackUploadFile filePath: "reports/html/*.html",
+      slackSend color: '#36a64f', message: "Automação executada com sucesso !!",slackUploadFile filePath: "/reports/html/*.html",
   
     }
     failure {
