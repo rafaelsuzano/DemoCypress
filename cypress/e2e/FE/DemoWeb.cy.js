@@ -25,7 +25,7 @@ describe('Demo Cypress', () => {
     should('be.visible')
 
     cy.contains('Thank You!')
-
+    cy.screenshot()
 
 })
 
@@ -52,6 +52,7 @@ it('Campo Obrigatório Email', () => {
   cy.get('*[class^="error-navigation-message"]').
   should('be.visible')
   cy.contains('This field is require')
+  cy.screenshot()
 
 })
 
@@ -75,6 +76,7 @@ it('Campo Obrigatório nome', () => {
   should('be.visible')
 
   cy.contains('This field is require')
+  cy.screenshot()
 
 
 })

@@ -1,0 +1,3 @@
+docker exec -it --user root 2a314c294f2d bin/bash
+# ajuste docker css
+System.setProperty("hudson.model.DirectoryBrowserSupport.CSP", "default-src 'self' 'unsafe-inline' 'unsafe-eval'; img-src 'self' 'unsafe-inline' data:;")
