@@ -37,7 +37,7 @@ pipeline {
 
     post {
     success {
-      slackSend color: '#36a64f', message: "Automação executada com sucesso  ${env.JOB_NAME}  build ${currentBuild.number}  Relatório  http://localhost:8080/job/DemoCypressWebApi/"{currentBuild.number}"/execution/node/3/ws/cypress/reports/html/index.html"
+      slackSend color: '#36a64f', message: "Automação executada com sucesso  ${env.JOB_NAME}  build ${currentBuild.number}  Relatório  http://localhost:8080/job/DemoCypressWebApi/${currentBuild.number}/execution/node/3/ws/cypress/reports/html/index.html"
 
 
     }
