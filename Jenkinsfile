@@ -4,8 +4,8 @@ pipeline {
         ansiColor('xterm')
     }
 
-   stages {
-       stage('Dependencies') {
+stages {
+        stage('Dependencies') {
            steps {
        
                sh 'npm install '
@@ -13,26 +13,24 @@ pipeline {
        }
        
        
-       stage('Install Cypress') {
+        stage('Install Cypress') {
            steps {
        
                sh 'npx cypress install --force'
            }
-
-       
        }
        
-       stage('e2e Tests') {
+        stage('e2e Tests') {
            steps {
                sh ' npx cypress run '
            }
        }
-       stage('Deploy') {
+        stage('Deploy') {
            steps {
                echo 'Deploying....'
            }
        }
-         post {
+        post {
             success {
                 slackSend "Build deployed successfully - ${env.JOB_NAME} ${env.BUILD_NUMBER} (<${env.BUILD_URL}|Open>)"
             }
