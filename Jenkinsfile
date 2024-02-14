@@ -37,8 +37,8 @@ pipeline {
 
     post {
     success {
-      slackSend color: '#36a64f', message: "Automação executada com sucesso  ${env.JOB_NAME}  build ${currentBuild.number} !!!"
-      slackUploadFile filePath: 'http://localhost:8080/job/DemoCypressWebApi/${currentBuild.number}/execution/node/3/ws/cypress/reports/html/index.html', initialComment: 'Relatório', credentialId: "cBIoMmfS3eRsqGUlRpZ3TiHH"
+      slackSend color: '#36a64f', message: "Automação executada com sucesso  ${env.JOB_NAME}  build ${currentBuild.number} +  'Relatório  http://localhost:8080/job/DemoCypressWebApi/'+${currentBuild.number}+'/execution/node/3/ws/cypress/reports/html/index.html "
+      // slackUploadFile filePath: 'http://localhost:8080/job/DemoCypressWebApi/'+${currentBuild.number}+'/execution/node/3/ws/cypress/reports/html/index.html', initialComment: 'Relatório', credentialId: "cBIoMmfS3eRsqGUlRpZ3TiHH"
 
     }
     failure {
