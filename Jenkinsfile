@@ -37,7 +37,8 @@ pipeline {
 
     post {
     success {
-      slackSend color: '#36a64f', message: "Automação executada com sucesso build ${env.JOB_NAME}  ${currentBuild.number} !!!",    slackUploadFile filePath: '/var/jenkins_home/workspace/DemoCypressWebApi/cypress/reports/html/index.html'  
+      slackSend color: '#36a64f', message: "Automação executada com sucesso build ${env.JOB_NAME}  ${currentBuild.number} !!!"
+      slackUploadFile filePath: 'hello.txt', initialComment: 'Here is your file'
 
   
     }
