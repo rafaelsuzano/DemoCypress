@@ -25,6 +25,8 @@ describe('Demo Cypress', () => {
     should('be.visible')
 
     cy.contains('Thank You!')
+    
+    cy.addTestContext('Mensagem de Teste');
     cy.screenshot()
 
 })
