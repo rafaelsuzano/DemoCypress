@@ -37,13 +37,13 @@ pipeline {
 
     post {
     success {
-      slackSend color: '#36a64f', message: "Automação executada com sucesso build ${env.JOB_NAME}  ${currentBuild.number} !!!"
-      slackUploadFile filePath: '/var/jenkins_home/workspace/DemoCypressWebApi/cypress/reports/html/index.html', initialComment: 'Here is your file'
-
+      slackSend color: '#36a64f', message: "Automação executada com sucesso  ${env.JOB_NAME}  build ${currentBuild.number} !!!"
+      slackUploadFile filePath: 'comandosDocker.txt', initialComment: 'Here is your file'
+                          
   
     }
     failure {
-      slackSend color: '#ff0000', message: "Falha na execução da automação  build  ${env.JOB_NAME}  ${currentBuild.number}!!!" 
+      slackSend color: '#ff0000', message: "Falha na execução da automação  ${env.JOB_NAME}  build ${currentBuild.number}!!!" 
     }
   }
 
