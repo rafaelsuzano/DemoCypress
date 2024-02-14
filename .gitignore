@@ -1,4 +1,4 @@
-
+reports/html/index.html
 screenshots/
-videos/
-node_modules/
+reports/videos/*.*
+node_modules
