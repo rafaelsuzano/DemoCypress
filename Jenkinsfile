@@ -38,7 +38,7 @@ pipeline {
     post {
     success {
       slackSend color: '#36a64f', message: "Automação executada com sucesso  ${env.JOB_NAME}  build ${currentBuild.number} !!!"
-      slackUploadFile filePath: 'comandosDocker.txt', initialComment: 'Here is your file'
+      slackUploadFile filePath: 'comandosDocker.txt', initialComment: 'Here is your file', credentialId: "WubehS9HZ9MxOUwgtvVknNse"
                           
   
     }
