@@ -30,7 +30,7 @@ jobs:
       - name: Notificar no Slack
         uses: rtCamp/action-slack-notify@v2
         env:
-          SLACK_WEBHOOK_URL: "T03HTULL6TB/B08EL4Y8AS2/V1Zej6LEgH8azDyE2miwfsY7"
+          SLACK_WEBHOOK_URL: "pV6iAg2E12I5ktc1UJIB5CvK"
           SLACK_MESSAGE: "📊 Relatório de testes disponível! 🔗 Baixe aqui: https://github.com/${{ github.repository }}/actions/runs/${{ github.run_id }}"
           SLACK_COLOR: "#36a64f"
           SLACK_CHANNEL: teste_automacao
