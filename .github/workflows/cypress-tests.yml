@@ -6,6 +6,8 @@ on:
 jobs:
   cypress-electron-tests:
     runs-on: ubuntu-latest
+    env:
+      TERM: xterm
     steps:
       - name: Get Codec
         uses: actions/checkout@v4.2.2
