@@ -20,3 +20,9 @@ jobs:
         with:
           name: html-report
           path: cypress/reports/html/index.html
+      - name: Notify Slack
+        uses: rtCamp/action-slack-notify@v2
+        env:
+            SLACK_WEBHOOK_URL: ${{https://hooks.slack.com/services/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}}
+            SLACK_MESSAGE: "O relatório de testes foi gerado! Baixe o artefato aqui: https://github.com/${{ github.repository }}/actions/runs/${{ github.run_id }}"
+            SLACK_COLOR: "#36a64f"
