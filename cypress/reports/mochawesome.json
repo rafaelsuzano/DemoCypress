@@ -1,0 +1,355 @@
+{
+  "stats": {
+    "suites": 4,
+    "tests": 8,
+    "passes": 8,
+    "pending": 0,
+    "failures": 0,
+    "testsRegistered": 8,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false,
+    "start": "2025-03-17T17:55:29.439Z",
+    "end": "2025-03-17T17:56:20.226Z",
+    "duration": 50787
+  },
+  "results": [
+    {
+      "uuid": "e0d54dae-bad8-4bcb-8305-1f6b20eecf39",
+      "title": "",
+      "fullFile": "cypress/e2e/BE/DemoApi.cy.js",
+      "file": "cypress/e2e/BE/DemoApi.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "c19bae69-fc6e-4392-a929-f37b6426644e",
+          "title": "Demo API",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "API",
+              "fullTitle": "Demo API API",
+              "timedOut": null,
+              "duration": 205,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.api({\n  url: 'https://jsonplaceholder.typicode.com/todos/1'\n}).then(Response => {\n  expect(Response.status).to.eq(200);\n  cy.log(JSON.stringify(Response.body));\n});",
+              "err": {},
+              "uuid": "147704cc-99b0-4ca9-8723-ab76f6b2242f",
+              "parentUUID": "c19bae69-fc6e-4392-a929-f37b6426644e",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "147704cc-99b0-4ca9-8723-ab76f6b2242f"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 205,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    },
+    {
+      "uuid": "cbbfea32-cf0c-4254-b4ad-c52341e546d9",
+      "title": "",
+      "fullFile": "cypress/e2e/FE/DemoWeb.cy.js",
+      "file": "cypress/e2e/FE/DemoWeb.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "d4d6b238-ff1c-4764-a1e0-4639c1947436",
+          "title": "Demo Cypress",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Fluxo Principal",
+              "fullTitle": "Demo Cypress Fluxo Principal",
+              "timedOut": null,
+              "duration": 5274,
+              "state": "passed",
+              "speed": "medium",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": "[\n  {\n    \"title\": \"cypress-mochawesome-reporter-screenshots\",\n    \"value\": [\n      [\n        \"/FE/DemoWeb.cy.js/Demo Cypress -- Fluxo Principal.png\"\n      ]\n    ]\n  },\n  \"Mensagem de Teste\"\n]",
+              "code": "cy.visit('https://form.jotform.com/231692676005660');\ncy.get('input[id=\"first_20\"]').type('rafael');\ncy.get('input[id=\"last_20\"]').type('Suzano');\ncy.get('input[id=\"input_19_full\"]').type('(111) 111-1111');\ncy.get('input[id=\"input_23\"]').type('rafaelsuzano@hotmail.com');\ncy.get('input[id=\"input_21_addr_line1\"]').type('a');\ncy.get('input[id=\"input_21_addr_line2\"]').type('a');\ncy.get('input[id=\"input_21_city\"]').type('a');\ncy.get('input[id=\"input_21_state\"]').type('a');\ncy.get('input[id=\"input_21_postal\"]').type('111111111');\ncy.get('#input_2').click();\ncy.get('*[class^=\"thankyou-sub-text ty-text\"]').should('be.visible');\ncy.contains('Thank You!');\ncy.addTestContext('Mensagem de Teste');\ncy.screenshot();",
+              "err": {},
+              "uuid": "54ff6188-2958-49a1-9651-dd215f08cfc6",
+              "parentUUID": "d4d6b238-ff1c-4764-a1e0-4639c1947436",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Campo Obrigatório Email",
+              "fullTitle": "Demo Cypress Campo Obrigatório Email",
+              "timedOut": null,
+              "duration": 3968,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": "{\n  \"title\": \"cypress-mochawesome-reporter-screenshots\",\n  \"value\": [\n    [\n      \"/FE/DemoWeb.cy.js/Demo Cypress -- Campo Obrigatório Email.png\"\n    ]\n  ]\n}",
+              "code": "cy.visit('https://form.jotform.com/231692676005660');\ncy.get('input[id=\"first_20\"]').type('rafael');\ncy.get('input[id=\"last_20\"]').type('Suzano');\ncy.get('input[id=\"input_19_full\"]').type('(111) 111-1111');\n//cy.get('input[id=\"input_23\"]').type('rafaelsuzano@hotmail.com')\ncy.get('input[id=\"input_21_addr_line1\"]').type('a');\ncy.get('input[id=\"input_21_addr_line2\"]').type('a');\ncy.get('input[id=\"input_21_city\"]').type('a');\ncy.get('input[id=\"input_21_state\"]').type('a');\ncy.get('input[id=\"input_21_postal\"]').type('111111111');\ncy.get('#input_2').click();\ncy.get('*[class^=\"form-line jf-required form-line-error\"]').should('be.visible');\ncy.contains('This field is require');\ncy.get('*[class^=\"error-navigation-message\"]').should('be.visible');\ncy.contains('This field is require');\ncy.screenshot();",
+              "err": {},
+              "uuid": "045098df-4a73-4467-b406-ac2453ff31a2",
+              "parentUUID": "d4d6b238-ff1c-4764-a1e0-4639c1947436",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Campo Obrigatório nome",
+              "fullTitle": "Demo Cypress Campo Obrigatório nome",
+              "timedOut": null,
+              "duration": 4173,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": "{\n  \"title\": \"cypress-mochawesome-reporter-screenshots\",\n  \"value\": [\n    [\n      \"/FE/DemoWeb.cy.js/Demo Cypress -- Campo Obrigatório nome.png\"\n    ]\n  ]\n}",
+              "code": "cy.visit('https://form.jotform.com/231692676005660');\n// cy.get('input[id=\"first_20\"]').type('rafael')\ncy.get('input[id=\"last_20\"]').type('Suzano');\ncy.get('input[id=\"input_19_full\"]').type('(111) 111-1111');\ncy.get('input[id=\"input_23\"]').type('rafaelsuzano@hotmail.com');\ncy.get('input[id=\"input_21_addr_line1\"]').type('a');\ncy.get('input[id=\"input_21_addr_line2\"]').type('a');\ncy.get('input[id=\"input_21_city\"]').type('a');\ncy.get('input[id=\"input_21_state\"]').type('a');\ncy.get('input[id=\"input_21_postal\"]').type('111111111');\ncy.get('#input_2').click();\ncy.get('*[class^=\"form-line jf-required form-line-error\"]').should('be.visible');\ncy.contains('This field is require');\ncy.screenshot();",
+              "err": {},
+              "uuid": "dec59d21-88e3-4e8c-9e82-a9b621622d83",
+              "parentUUID": "d4d6b238-ff1c-4764-a1e0-4639c1947436",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "54ff6188-2958-49a1-9651-dd215f08cfc6",
+            "045098df-4a73-4467-b406-ac2453ff31a2",
+            "dec59d21-88e3-4e8c-9e82-a9b621622d83"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 13415,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    },
+    {
+      "uuid": "fec4eec5-c552-45c5-99a4-35fe15114dc1",
+      "title": "",
+      "fullFile": "cypress/e2e/BE/DemoApi.cy.js",
+      "file": "cypress/e2e/BE/DemoApi.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "e493890f-8af8-4a17-b38a-c67eca5c8cf1",
+          "title": "Demo API",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "API",
+              "fullTitle": "Demo API API",
+              "timedOut": null,
+              "duration": 179,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.api({\n  url: 'https://jsonplaceholder.typicode.com/todos/1'\n}).then(Response => {\n  expect(Response.status).to.eq(200);\n  cy.log(JSON.stringify(Response.body));\n});",
+              "err": {},
+              "uuid": "1ed036d3-4c3a-44a0-922f-9db2e79b2ec3",
+              "parentUUID": "e493890f-8af8-4a17-b38a-c67eca5c8cf1",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "1ed036d3-4c3a-44a0-922f-9db2e79b2ec3"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 179,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    },
+    {
+      "uuid": "91eea032-0ad2-4879-ac8d-7a01f5abb11e",
+      "title": "",
+      "fullFile": "cypress/e2e/FE/DemoWeb.cy.js",
+      "file": "cypress/e2e/FE/DemoWeb.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "4f5874bf-8679-493a-a515-97b10dbe32d8",
+          "title": "Demo Cypress",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Fluxo Principal",
+              "fullTitle": "Demo Cypress Fluxo Principal",
+              "timedOut": null,
+              "duration": 5374,
+              "state": "passed",
+              "speed": "medium",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": "[\n  {\n    \"title\": \"cypress-mochawesome-reporter-screenshots\",\n    \"value\": [\n      [\n        \"/FE/DemoWeb.cy.js/Demo Cypress -- Fluxo Principal.png\"\n      ]\n    ]\n  },\n  \"Mensagem de Teste\"\n]",
+              "code": "cy.visit('https://form.jotform.com/231692676005660');\ncy.get('input[id=\"first_20\"]').type('rafael');\ncy.get('input[id=\"last_20\"]').type('Suzano');\ncy.get('input[id=\"input_19_full\"]').type('(111) 111-1111');\ncy.get('input[id=\"input_23\"]').type('rafaelsuzano@hotmail.com');\ncy.get('input[id=\"input_21_addr_line1\"]').type('a');\ncy.get('input[id=\"input_21_addr_line2\"]').type('a');\ncy.get('input[id=\"input_21_city\"]').type('a');\ncy.get('input[id=\"input_21_state\"]').type('a');\ncy.get('input[id=\"input_21_postal\"]').type('111111111');\ncy.get('#input_2').click();\ncy.get('*[class^=\"thankyou-sub-text ty-text\"]').should('be.visible');\ncy.contains('Thank You!');\ncy.addTestContext('Mensagem de Teste');\ncy.screenshot();",
+              "err": {},
+              "uuid": "03273cb9-861a-44c5-8972-aee3f3e36e77",
+              "parentUUID": "4f5874bf-8679-493a-a515-97b10dbe32d8",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Campo Obrigatório Email",
+              "fullTitle": "Demo Cypress Campo Obrigatório Email",
+              "timedOut": null,
+              "duration": 3930,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": "{\n  \"title\": \"cypress-mochawesome-reporter-screenshots\",\n  \"value\": [\n    [\n      \"/FE/DemoWeb.cy.js/Demo Cypress -- Campo Obrigatório Email.png\"\n    ]\n  ]\n}",
+              "code": "cy.visit('https://form.jotform.com/231692676005660');\ncy.get('input[id=\"first_20\"]').type('rafael');\ncy.get('input[id=\"last_20\"]').type('Suzano');\ncy.get('input[id=\"input_19_full\"]').type('(111) 111-1111');\n//cy.get('input[id=\"input_23\"]').type('rafaelsuzano@hotmail.com')\ncy.get('input[id=\"input_21_addr_line1\"]').type('a');\ncy.get('input[id=\"input_21_addr_line2\"]').type('a');\ncy.get('input[id=\"input_21_city\"]').type('a');\ncy.get('input[id=\"input_21_state\"]').type('a');\ncy.get('input[id=\"input_21_postal\"]').type('111111111');\ncy.get('#input_2').click();\ncy.get('*[class^=\"form-line jf-required form-line-error\"]').should('be.visible');\ncy.contains('This field is require');\ncy.get('*[class^=\"error-navigation-message\"]').should('be.visible');\ncy.contains('This field is require');\ncy.screenshot();",
+              "err": {},
+              "uuid": "e4f21f75-bd4f-45f3-98c5-52ece6e41c1a",
+              "parentUUID": "4f5874bf-8679-493a-a515-97b10dbe32d8",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Campo Obrigatório nome",
+              "fullTitle": "Demo Cypress Campo Obrigatório nome",
+              "timedOut": null,
+              "duration": 4573,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": "{\n  \"title\": \"cypress-mochawesome-reporter-screenshots\",\n  \"value\": [\n    [\n      \"/FE/DemoWeb.cy.js/Demo Cypress -- Campo Obrigatório nome.png\"\n    ]\n  ]\n}",
+              "code": "cy.visit('https://form.jotform.com/231692676005660');\n// cy.get('input[id=\"first_20\"]').type('rafael')\ncy.get('input[id=\"last_20\"]').type('Suzano');\ncy.get('input[id=\"input_19_full\"]').type('(111) 111-1111');\ncy.get('input[id=\"input_23\"]').type('rafaelsuzano@hotmail.com');\ncy.get('input[id=\"input_21_addr_line1\"]').type('a');\ncy.get('input[id=\"input_21_addr_line2\"]').type('a');\ncy.get('input[id=\"input_21_city\"]').type('a');\ncy.get('input[id=\"input_21_state\"]').type('a');\ncy.get('input[id=\"input_21_postal\"]').type('111111111');\ncy.get('#input_2').click();\ncy.get('*[class^=\"form-line jf-required form-line-error\"]').should('be.visible');\ncy.contains('This field is require');\ncy.screenshot();",
+              "err": {},
+              "uuid": "cfcd842c-6e99-4f6a-a72c-a2daf944be1d",
+              "parentUUID": "4f5874bf-8679-493a-a515-97b10dbe32d8",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "03273cb9-861a-44c5-8972-aee3f3e36e77",
+            "e4f21f75-bd4f-45f3-98c5-52ece6e41c1a",
+            "cfcd842c-6e99-4f6a-a72c-a2daf944be1d"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 13877,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/reports",
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "6.2.0"
+    }
+  }
+}

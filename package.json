@@ -4,7 +4,9 @@
   "description": "demo teste",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+
+    "executar" : "rm -f cypress/reports/mochawesome_* && npx cypress run && npx mochawesome-merge cypress/reports/*.json -o cypress/reports/mochawesome.json && node sendMetrics.js"
   },
   "author": "rafael suzano cruz",
   "license": "ISC",
@@ -13,6 +15,7 @@
     "cypress-mochawesome-reporter": "^3.5.1"
   },
   "dependencies": {
+    "@influxdata/influxdb-client": "^1.35.0",
     "cypress-plugin-api": "^2.11.1"
   }
 }
