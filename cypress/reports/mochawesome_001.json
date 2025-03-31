@@ -5,9 +5,9 @@
     "passes": 1,
     "pending": 0,
     "failures": 0,
-    "start": "2025-03-17T17:56:03.542Z",
-    "end": "2025-03-17T17:56:03.742Z",
-    "duration": 200,
+    "start": "2025-03-18T23:28:38.692Z",
+    "end": "2025-03-18T23:28:38.935Z",
+    "duration": 243,
     "testsRegistered": 1,
     "passPercent": 100,
     "pendingPercent": 0,
@@ -18,7 +18,7 @@
   },
   "results": [
     {
-      "uuid": "fec4eec5-c552-45c5-99a4-35fe15114dc1",
+      "uuid": "77f2897a-cf57-4585-96fd-5ed727c4295b",
       "title": "",
       "fullFile": "cypress/e2e/BE/DemoApi.cy.js",
       "file": "cypress/e2e/BE/DemoApi.cy.js",
@@ -27,7 +27,7 @@
       "tests": [],
       "suites": [
         {
-          "uuid": "e493890f-8af8-4a17-b38a-c67eca5c8cf1",
+          "uuid": "47ed811e-2825-455e-a713-d96167cb3d4c",
           "title": "Demo API",
           "fullFile": "",
           "file": "",
@@ -38,7 +38,7 @@
               "title": "API",
               "fullTitle": "Demo API API",
               "timedOut": null,
-              "duration": 179,
+              "duration": 197,
               "state": "passed",
               "speed": "fast",
               "pass": true,
@@ -47,20 +47,20 @@
               "context": null,
               "code": "cy.api({\n  url: 'https://jsonplaceholder.typicode.com/todos/1'\n}).then(Response => {\n  expect(Response.status).to.eq(200);\n  cy.log(JSON.stringify(Response.body));\n});",
               "err": {},
-              "uuid": "1ed036d3-4c3a-44a0-922f-9db2e79b2ec3",
-              "parentUUID": "e493890f-8af8-4a17-b38a-c67eca5c8cf1",
+              "uuid": "b7711e19-02e0-4655-a2a3-e03edf43609b",
+              "parentUUID": "47ed811e-2825-455e-a713-d96167cb3d4c",
               "isHook": false,
               "skipped": false
             }
           ],
           "suites": [],
           "passes": [
-            "1ed036d3-4c3a-44a0-922f-9db2e79b2ec3"
+            "b7711e19-02e0-4655-a2a3-e03edf43609b"
           ],
           "failures": [],
           "pending": [],
           "skipped": [],
-          "duration": 179,
+          "duration": 197,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000

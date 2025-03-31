@@ -2,7 +2,7 @@ const { InfluxDB, Point } = require('@influxdata/influxdb-client');
 const fs = require('fs');
 
 const url = 'http://localhost:8086'; // ou URL do seu InfluxDB
-const token = 'X7YbMtTf5v3PXU4oxUDUuQuvdyYArKU4MCU3xmL7QK1y1UCGP7Ste7PMTbN2mqUpTb-XCicceZOX6-p-RDqCyw==';
+const token = 'B6JSVCzVbCoU-orWukJPjsBxXVi7Sb0_0GqVuzTKyX8UqVIzA2wyE07WK5Mbp-LRHlO9rCrz51Ez1LLcrziVbQ==';
 const org = 'suzano';
 const bucket = 'cypress';
 
