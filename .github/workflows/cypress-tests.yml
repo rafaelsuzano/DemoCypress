@@ -1,0 +1,36 @@
+name: Cypress Tests
+
+on:  
+  workflow_dispatch:
+
+jobs:
+  cypress-electron-tests:
+    runs-on: ubuntu-latest
+    env:
+      TERM: xterm
+    steps:
+      - name: Get Codec
+        uses: actions/checkout@v4.2.2
+     
+      - name: Instalar dependencias
+        run: npm install
+
+      - name: Upload HTML Report
+        uses: actions/upload-artifact@v4
+        with:
+          name: html-report
+          path: cypress/reports/html/index.html
+
+
+      - name: Obter URL do Artefato
+        id: artifact_url
+        run: |
+          echo "Baixe o relatório aqui: https://github.com/${{ github.repository }}/actions/runs/${{ github.run_id }}" >> artifact_url.txt
+
+      - name: Notificar no Slack
+        uses: rtCamp/action-slack-notify@v2
+        env:
+          SLACK_WEBHOOK_URL: "pV6iAg2E12I5ktc1UJIB5CvK"
+          SLACK_MESSAGE: "📊 Relatório de testes disponível! 🔗 Baixe aqui: https://github.com/${{ github.repository }}/actions/runs/${{ github.run_id }}"
+          SLACK_COLOR: "#36a64f"
+          SLACK_CHANNEL: teste_automacao
