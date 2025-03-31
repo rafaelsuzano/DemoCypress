@@ -1,4 +1,5 @@
-reports/html/index.html
+reports/index.html
 screenshots/
 reports/videos/*.*
 /node_modules
+reports/*.*
