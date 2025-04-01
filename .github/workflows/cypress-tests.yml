@@ -19,7 +19,7 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: html-report
-          path: cypress/reports/html/index.html
+          path: cypress/reports/index.html
 
 
       - name: Obter URL do Artefato
