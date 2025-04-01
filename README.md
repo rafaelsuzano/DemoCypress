@@ -1,7 +1,7 @@
 
 # Conceitos
   Application Actions
-  Arquivo supoort/utils.js
+  Arquivo support/utils.js
 
 # DemoCypress
 
