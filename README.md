@@ -1,5 +1,9 @@
-# DemoCypress
 
+# Conceitos
+  Application Actions
+  Arquivo supoort/utils.js
+
+# DemoCypress
 
   npm init
 
