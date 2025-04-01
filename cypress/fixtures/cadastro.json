@@ -1,0 +1,36 @@
+[
+    {
+        "cenario": "Cadastro com Sucesso",
+        "FirstName": "Rafael",
+        "LastName": "Suzano",
+        "cep": "11035001",
+        "email": "r@f.com",
+        "esperado": "Thank You!",
+        "telefone": "(111) 111-1111"
+    },
+    {
+        "cenario": "Cadastro Sem Email",
+        "FirstName": "Rafael",
+        "LastName": "Suzano",
+        "cep": "11035001",
+        "email": " ",
+        "esperado": "This field is require",
+        "telefone": "(111) 111-1111"
+    },
+    {
+        "cenario": "Cadastro Sem cep",
+        "FirstName": "Rafael",
+        "LastName": "Suzano",
+        "cep": " ",
+        "esperado": "This field is require",
+      "telefone": "(111) 111-1111"
+    },
+    {
+        "cenario": "Cadastro Sem Telefone",
+        "FirstName": "Rafael",
+        "LastName": "Suzano",
+        "cep": "11035001",
+        "esperado": "This field is require",
+        "telefone": " "
+    }
+]
