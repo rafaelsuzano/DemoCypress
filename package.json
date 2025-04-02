@@ -4,8 +4,11 @@
   "description": "demo teste",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "executar": "rm -f cypress/reports/mochawesome_* && npx cypress run && npx mochawesome-merge cypress/reports/*.json -o cypress/reports/mochawesome.json && node sendMetrics.js"
+  
+    "teste": "rm -f cypress/reports/mochawesome_* && npx cypress run && npx mochawesome-merge cypress/reports/*.json -o cypress/reports/mochawesome.json && node sendMetrics.js",
+  "executar_api": "npx cypress run  --spec cypress/e2e/BE/DemoApi.cy.js ",
+   "executar_web": "npx cypress run  --spec cypress/e2e/FE/DemoWeb.cy.js "
+  
   },
   "author": "rafael suzano cruz",
   "license": "ISC",

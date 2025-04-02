@@ -76,5 +76,11 @@ A combinação de *fixtures* e *Application Actions* no Cypress oferece uma abor
 
   npm i cypress-plugin-api
 
+  npm run teste  
+
 ##  Demo WEB
+  npm run executar_web
+
 ##  Demo API
+  
+  npm run executar_api
