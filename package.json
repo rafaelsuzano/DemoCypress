@@ -4,16 +4,15 @@
   "description": "demo teste",
   "main": "index.js",
   "scripts": {
-  
     "teste": "rm -f cypress/reports/mochawesome_* && npx cypress run && npx mochawesome-merge cypress/reports/*.json -o cypress/reports/mochawesome.json && node sendMetrics.js",
-  "executar_api": "npx cypress run  --spec cypress/e2e/BE/DemoApi.cy.js ",
-   "executar_web": "npx cypress run  --spec cypress/e2e/FE/DemoWeb.cy.js "
-  
+    "executar_api": "npx cypress run  --spec cypress/e2e/BE/DemoApi.cy.js ",
+    "executar_web": "npx cypress run  --spec cypress/e2e/FE/DemoWeb.cy.js "
   },
   "author": "rafael suzano cruz",
   "license": "ISC",
   "devDependencies": {
     "cypress": "^13.6.6",
+    "cypress-docgen": "^1.0.0",
     "cypress-mochawesome-reporter": "^3.8.2",
     "mochawesome-merge": "^4.4.1"
   },
