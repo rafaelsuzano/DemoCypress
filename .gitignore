@@ -3,3 +3,4 @@ screenshots/
 reports/videos/*.*
 /node_modules
 reports/*.*
+cypress/reports/index.html
