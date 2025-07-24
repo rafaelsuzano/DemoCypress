@@ -1,9 +1,9 @@
 
 #gera imagem
 
-docker build -t democypress-nginx .
+docker build -t democypress .
 #executa o teste
-docker run -p 95:95 democypress-nginx
+docker run democypress
 
 
 docker run -it democypress-nginx /bin/bash

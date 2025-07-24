@@ -2,24 +2,19 @@ FROM node:18
 
 ENV TERM=xterm
 
-# Instala dependências do Cypress + Nginx
+# Instala dependências do Cypress
 RUN apt-get update && apt-get install -y \
-  git curl wget unzip xvfb libgtk2.0-0 libgtk-3-0 libxss1 libgconf-2-4 libnss3 libasound2 \
-  libxshmfence-dev libx11-xcb-dev libxcb-dri3-0 libgbm-dev nginx
+    git libgtk2.0-0 libgtk-3-0 libgbm-dev libnotify-dev \
+    libgconf-2-4 libnss3 libxss1 libasound2 libxtst6 xauth xvfb
 
-# Altera corretamente a porta do nginx para 95
-RUN sed -i 's/listen 80 default_server;/listen 95 default_server;/g' /etc/nginx/sites-available/default && \
-    sed -i 's/listen \[::\]:80 default_server;/listen [::]:95 default_server;/g' /etc/nginx/sites-available/default
-
-# Cria diretório de trabalho
+# Diretório de trabalho
 WORKDIR /app
 
-# Clona seu repositório
+# Clona o repositório com os testes
 RUN git clone https://github.com/rafaelsuzano/DemoCypress.git .
 
-# Instala dependências do projeto e reporter
+# Instala dependências do projeto
 RUN npm install
-RUN npm install --save-dev mochawesome cypress-mochawesome-reporter
 
 # Verifica instalação do Cypress
 RUN npx cypress verify
@@ -28,7 +23,5 @@ RUN npx cypress verify
 COPY entrypoint.sh /entrypoint.sh
 RUN chmod +x /entrypoint.sh
 
-EXPOSE 95
-
-# Usa o script como ponto de entrada
-CMD ["sh", "/entrypoint.sh"]
+# Comando de execução
+CMD ["/entrypoint.sh"]
