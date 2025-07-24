@@ -1,9 +1,3 @@
-Claro! Aqui está uma sugestão de **atualização do `README.md`** 
-do seu projeto [DemoCypress](https://github.com/rafaelsuzano/DemoCypress), 
-incorporando as instruções completas de uso com Docker **sem docker-compose**, além de manter os comandos de execução para os testes Web e API.
-
----
-
 ````markdown
 # DemoCypress
 
